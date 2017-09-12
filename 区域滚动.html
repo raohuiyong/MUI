@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">栅格</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--这里放置真实显示的DOM内容-->
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+					<h1>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。 </h1>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var options = {
+				scrollY: true, //是否竖向滚动
+				scrollX: false, //是否横向滚动
+				startX: 0, //初始化时滚动至x
+				startY: 0, //初始化时滚动至y
+				indicators: true, //是否显示滚动条
+				deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+				bounce: true //是否启用回弹
+			}
+//			mui('.mui-scroll-wrapper').scroll(options);
+//			mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100); //100毫秒滚动到顶
+			mui('.mui-scroll-wrapper').scroll().scrollToBottom(0,0,100); //100毫秒滚动到底
+			
+		</script>
+	</body>
+
+</html>

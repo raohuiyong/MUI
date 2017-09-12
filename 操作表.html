@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">操作表</h1>
+		</header>
+		<div class="mui-content">
+			<div id="hide_1" class="mui-popover mui-popover-bottom mui-popover-action ">
+		    <!-- 可选择菜单 -->
+		    <ul class="mui-table-view">
+		      <li class="mui-table-view-cell">
+		        <a href="#">菜单1</a>
+		      </li>
+		      <li class="mui-table-view-cell">
+		        <a href="#">菜单2</a>
+		      </li>
+		    </ul>
+		    <!-- 取消菜单 -->
+		    <ul class="mui-table-view">
+		      <li class="mui-table-view-cell">
+		        <a href="#hide_1" onclick="hideIn()"><b>取消</b></a>
+		      </li>
+		    </ul>
+		</div>
+		<a href="#hide_1" id="openSheet" class="mui-btn mui-btn-primary mui-btn-block">打开操作表</a>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//传入toggle参数，用户无需关心当前是显示还是隐藏状态，mui会自动识别处理；
+			function hideIn(){
+				mui('#hide_1').popover('toggle');
+			}
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">操作表</h1>
+		</header>
+		<div class="mui-content">
+			<button type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id='alertBtn'>警告框</button>
+			<button type="button" class="mui-btn mui-btn-blue" id='confirmBtn'>确认框</button>
+			<button type="button" class="mui-btn mui-btn-blue" id='promptBtn'>输入确认框</button>
+			
+		</div>
+		
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui(document.body).on('tap','#alertBtn',function(e){
+				mui.alert('你把我点击了一下，我要提示你','alert警告框');
+			});
+			mui(document.body).on('tap','#confirmBtn',function(e){
+				mui.confirm('mui很好用','Hello mui',['OK','Clean'],function(e){
+					if(e.index === 0){
+						mui.toast('你点击了OK')
+					}else{
+						mui.toast('你点击了Clean')
+					}
+				});
+			});
+			mui(document.body).on('tap','#promptBtn',function(e){
+				mui.prompt('你现在做的什么工作','请输入您的岗位','调查岗位',['OK','Clean'],function(e){
+					if(e.index === 0){
+						mui.toast('您的岗位是'+e.value)
+					}else{
+						mui.toast('您取消了操作')
+					}
+				})
+			});
+		</script>
+	</body>
+
+</html>
